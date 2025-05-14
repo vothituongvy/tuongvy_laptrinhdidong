@@ -1,0 +1,132 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="16dp"
+    android:background="#FFFFFF">
+
+    <!-- Tiêu đề -->
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#A0FFFF"
+        android:padding="10dp"
+        android:text="Chuyển đổi ngoại tệ"
+        android:textSize="22sp"
+        android:textStyle="bold"
+        android:gravity="center"
+        android:textColor="#FF0000"/>
+
+    <!-- Chọn ngoại tệ -->
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Chọn ngoại tệ:"
+        android:textSize="16sp"
+        android:textStyle="italic"
+        android:textColor="#FF4081"
+        android:paddingTop="10dp"/>
+
+    <RadioGroup
+        android:id="@+id/radioGroup"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:paddingTop="5dp"
+        android:layout_gravity="center_horizontal">
+
+        <RadioButton
+            android:id="@+id/rbUsd"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="USD"
+            android:checked="true"/>
+
+        <RadioButton
+            android:id="@+id/rbEur"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="EUR"/>
+
+        <RadioButton
+            android:id="@+id/rbJpy"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="JPY"/>
+    </RadioGroup>
+
+    <!-- Bảng nhập dữ liệu -->
+    <TableLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:stretchColumns="1"
+        android:paddingTop="10dp">
+
+        <TableRow>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="VN Đồng"
+                android:textSize="16sp"
+                android:textStyle="bold"
+                android:textColor="#669900"/>
+
+            <EditText
+                android:id="@+id/edtVnd"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:inputType="numberDecimal"
+                android:text="0"/>
+        </TableRow>
+
+        <TableRow>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Ngoại tệ"
+                android:textSize="16sp"
+                android:textStyle="bold"
+                android:textColor="#669900"/>
+
+            <EditText
+                android:id="@+id/edtForeign"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:inputType="numberDecimal"
+                android:focusable="false"
+                android:text="0"/>
+        </TableRow>
+    </TableLayout>
+
+    <!-- Hàng chứa 2 nút bấm -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="center"
+        android:paddingTop="10dp">
+
+        <Button
+            android:id="@+id/btnVndToForeign"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="wrap_content"
+            android:text="VND TO NGOẠI TỆ"/>
+
+        <Button
+            android:id="@+id/btnForeignToVnd"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="wrap_content"
+            android:text="NGOẠI TỆ TO VND"/>
+    </LinearLayout>
+
+    <!-- Nút CLEAR căn giữa -->
+    <Button
+        android:id="@+id/btnClear"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="CLEAR"
+        android:layout_marginTop="10dp"/>
+</LinearLayout>
