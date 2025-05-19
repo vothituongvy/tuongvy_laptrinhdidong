@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<shape xmlns:android="http://schemas.android.com/apk/res/android"
+    android:shape="oval">
+
+    <!-- Nền trong suốt để chỉ còn viền -->
+    <solid android:color="@android:color/transparent" />
+
+    <!-- Viền trắng 2 dp (thay đổi độ dày tuỳ ý) -->
+    <stroke
+        android:width="2dp"
+        android:color="@color/white" />
+
+    <!-- Đảm bảo bo góc tuyệt đối tròn -->
+    <size android:width="70dp" android:height="70dp"/>
+</shape>

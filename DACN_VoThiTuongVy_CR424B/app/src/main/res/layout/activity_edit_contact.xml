@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout  xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#2B3E53"
+    tools:context=".EditContactActivity">
+    <TextView
+        android:id="@+id/tvTime"
+        android:layout_width="match_parent"
+        android:layout_height="45sp"
+        android:background="#0B0B0B"
+        android:text="Update Contact"
+        android:textColor="#F8F8F8"
+        android:gravity="left"
+        android:textSize="25sp"
+        android:textStyle="bold" /> <LinearLayout
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:layout_centerInParent="true"
+    android:padding="16dp">
+
+    <!-- Circle image for profile -->
+
+
+    <!-- Input fields -->
+    <ImageView
+        android:id="@+id/imageViewProfile"
+        android:layout_width="70dp"
+        android:layout_height="70dp"
+        android:layout_gravity="center"
+        android:layout_marginBottom="16dp"
+        android:scaleType="centerCrop"
+        android:src="@drawable/avatar"
+        android:background="@drawable/circle_background"/>
+
+    <EditText
+        android:id="@+id/name"
+        android:layout_width="match_parent"
+        android:layout_height="50sp"
+        android:layout_marginTop="16dp"
+        android:background="@drawable/edittext_border"
+        android:drawablePadding="8dp"
+        android:drawableTint="@color/white"
+        android:hint="Name"
+
+        android:paddingStart="12dp"
+
+        android:textColor="@color/white"
+        android:textColorHint="@color/white" />
+
+    <EditText
+        android:id="@+id/phone"
+        android:layout_width="match_parent"
+        android:layout_height="50sp"
+        android:layout_marginTop="8dp"
+        android:background="@drawable/edittext_border"
+        android:hint="Phone"
+        android:inputType="phone"
+        android:paddingStart="12dp"
+
+        android:textColor="@color/white"
+        android:textColorHint="@color/white" />
+
+    <EditText
+        android:id="@+id/email"
+        android:layout_width="match_parent"
+        android:layout_height="50sp"
+        android:layout_marginTop="8dp"
+        android:background="@drawable/edittext_border"
+        android:hint="Email"
+        android:inputType="textEmailAddress"
+
+        android:paddingStart="12dp"
+        android:textColor="@color/white"
+        android:textColorHint="@color/white" />
+
+    <EditText
+        android:id="@+id/notes"
+        android:layout_width="match_parent"
+        android:layout_height="50sp"
+        android:layout_marginTop="8dp"
+        android:background="@drawable/edittext_border"
+        android:hint="Note"
+        android:inputType="textMultiLine"
+
+        android:paddingStart="12dp"
+        android:textColor="@color/white"
+        android:textColorHint="@color/white" />
+</LinearLayout>
+
+    <ImageButton
+        android:id="@+id/btnUpdate"
+        android:layout_width="70dp"
+        android:layout_height="70dp"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginEnd="27dp"
+        android:layout_marginBottom="27dp"
+        android:background="@null"
+        android:contentDescription="Edit"
+
+        android:scaleType="fitCenter"
+        android:src="@drawable/pencil"
+        android:tint="#20bf55"/>
+
+</RelativeLayout >

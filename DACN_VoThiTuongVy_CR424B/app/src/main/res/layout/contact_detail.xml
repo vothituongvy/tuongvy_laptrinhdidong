@@ -1,0 +1,129 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#263238">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <!-- Thanh tiêu đề -->
+        <TextView
+            android:id="@+id/tvTime"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="#0B0B0B"
+            android:gravity="center_vertical"
+            android:padding="16dp"
+            android:text="Contact Detail"
+            android:textColor="#F8F8F8"
+            android:textSize="22sp"
+            android:textStyle="bold" />
+
+        <!-- Nội dung chi tiết -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="16dp">
+
+            <!-- Ảnh đại diện -->
+            <ImageView
+                android:id="@+id/imageView"
+                android:layout_width="match_parent"
+                android:layout_height="200dp"
+                android:scaleType="centerCrop"
+                android:src="@drawable/ic_launcher_background"
+                android:background="@android:color/darker_gray" />
+
+            <!-- Tên và ghi chú -->
+            <TextView
+                android:id="@+id/nameTextView"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Mr. Cat"
+                android:textColor="#FFFFFF"
+                android:textSize="22sp"
+                android:textStyle="bold"
+                android:gravity="center"
+                android:layout_marginTop="8dp" />
+
+            <TextView
+                android:id="@+id/noteTextView"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Cat dore"
+                android:textColor="#B0BEC5"
+                android:gravity="center"
+                android:textSize="14sp" />
+
+            <!-- Thông tin liên hệ -->
+            <TextView
+                android:id="@+id/phoneTextView"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Phone: 90939893"
+                android:textColor="@color/white"
+                android:layout_marginTop="16dp"
+                android:textSize="16sp" />
+
+            <TextView
+                android:id="@+id/emailTextView"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Email: cat@gmail.com"
+                android:textColor="@color/white"
+                android:textSize="16sp" />
+
+            <TextView
+                android:id="@+id/addedTextView"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Added Time: 04/01/22 01:50 PM"
+                android:textColor="@color/white"
+                android:textSize="14sp" />
+
+            <TextView
+                android:id="@+id/updatedTextView"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Updated Time: 05/01/22 06:18 PM"
+                android:textColor="@color/white"
+                android:textSize="14sp" />
+
+            <!-- Nút chức năng -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:gravity="center"
+                android:layout_marginTop="24dp"
+                android:layout_marginBottom="24dp">
+
+                <ImageButton
+                    android:id="@+id/editButton"
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
+                    android:src="@drawable/edit"
+                    android:background="@android:color/transparent"
+                    android:contentDescription="Edit"
+                    android:scaleType="centerInside"
+                    android:tint="@color/white"/>
+
+                <ImageButton
+                    android:id="@+id/deleteButton"
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
+                    android:src="@drawable/bin"
+                    android:background="@android:color/transparent"
+                    android:layout_marginStart="24dp"
+                    android:contentDescription="Delete"
+                    android:scaleType="centerInside"
+                    android:tint="@color/white"/>
+
+            </LinearLayout>
+        </LinearLayout>
+    </LinearLayout>
+</ScrollView>

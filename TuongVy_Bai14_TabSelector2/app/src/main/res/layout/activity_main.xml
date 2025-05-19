@@ -1,77 +1,90 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
+<TabHost xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
-    android:id="@+id/main"
+    android:id="@+id/tabhost"
     android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    android:orientation="vertical"
-    tools:context=".MainActivity" >
+    android:layout_height="match_parent">
 
-    <TabHost
-        android:id="@+id/tabHost"
+    <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="match_parent">
+        android:layout_height="match_parent"
+        android:orientation="vertical">
 
-        <LinearLayout
+        <!-- Tab tiêu đề -->
+        <TabWidget
+            android:id="@android:id/tabs"
             android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:orientation="vertical">
+            android:layout_height="wrap_content" />
 
-            <TabWidget
-                android:id="@android:id/tabs"
+        <!-- Nội dung tab -->
+        <FrameLayout
+            android:id="@android:id/tabcontent"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1">
+
+            <!-- Tab 1 -->
+            <LinearLayout
+                android:id="@+id/tab1"
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content" />
+                android:layout_height="match_parent"
+                android:orientation="vertical"
+                android:padding="10dp">
 
-            <FrameLayout
-                android:id="@android:id/tabcontent"
-                android:layout_width="match_parent"
-                android:layout_height="match_parent">
-
+                <!-- Thanh tìm kiếm và nút xóa -->
                 <LinearLayout
-                    android:id="@+id/tab1"
                     android:layout_width="match_parent"
-                    android:layout_height="match_parent"
-                    android:orientation="vertical">
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
 
                     <EditText
                         android:id="@+id/edttim"
-                        android:layout_width="match_parent"
+                        android:layout_width="0dp"
                         android:layout_height="wrap_content"
-                        android:ems="10"
-                        android:inputType="text"
-                        android:text="Name" />
+                        android:layout_weight="1"
+                        android:hint="Nhập để tìm..." />
 
-                    <ListView
-                        android:id="@+id/lv1"
-                        android:layout_width="match_parent"
-                        android:layout_height="match_parent" />
+                    <ImageButton
+                        android:id="@+id/btnxoa"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        tools:srcCompat="@drawable/xoa" />
                 </LinearLayout>
 
-                <LinearLayout
-                    android:id="@+id/tab2"
+                <!-- Danh sách tab 1 -->
+                <ListView
+                    android:id="@+id/lv1"
                     android:layout_width="match_parent"
-                    android:layout_height="match_parent"
-                    android:orientation="vertical">
+                    android:layout_height="wrap_content" />
+            </LinearLayout>
 
-                    <ListView
-                        android:id="@+id/lv2"
-                        android:layout_width="match_parent"
-                        android:layout_height="match_parent" />
-                </LinearLayout>
+            <!-- Tab 2 -->
+            <LinearLayout
+                android:id="@+id/tab2"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical"
+                android:padding="10dp">
 
-                <LinearLayout
-                    android:id="@+id/tab3"
+                <ListView
+                    android:id="@+id/lv2"
                     android:layout_width="match_parent"
-                    android:layout_height="match_parent"
-                    android:orientation="vertical">
+                    android:layout_height="wrap_content" />
+            </LinearLayout>
 
-                    <ListView
-                        android:id="@+id/lv3"
-                        android:layout_width="match_parent"
-                        android:layout_height="match_parent" />
-                </LinearLayout>
-            </FrameLayout>
-        </LinearLayout>
-    </TabHost>
-</LinearLayout>
+            <!-- Tab 3 -->
+            <LinearLayout
+                android:id="@+id/tab3"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical"
+                android:padding="10dp">
+
+                <ListView
+                    android:id="@+id/lv3"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content" />
+            </LinearLayout>
+        </FrameLayout>
+    </LinearLayout>
+</TabHost>
